@@ -13,7 +13,7 @@ router.post('/generate-token', (req, res) => {
     }
     const token = crypto.randomBytes(16).toString('hex'); // Generate a unique token
     tokens[token] = tableId; // Store token and tableId
-    const qrUrl = `https://srishti-backend.vercel.app/handle-redirect?token=${token}&tableId=${tableId}`;
+    const qrUrl = `https://srishti-customer.vercel.app/handle-redirect?token=${token}&tableId=${tableId}`;
     res.json({ qrUrl });
 });
 
